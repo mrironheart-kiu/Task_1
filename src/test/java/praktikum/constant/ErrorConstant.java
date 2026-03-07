@@ -1,4 +1,4 @@
-package praktikum.util;
+package praktikum.constant;
 
 public class ErrorConstant {
     public static final String DEFAULT_ERROR_MESSAGE = "Фактический результат не соответствует ожидаемому";

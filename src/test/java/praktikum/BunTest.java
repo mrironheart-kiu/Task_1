@@ -1,10 +1,10 @@
 package praktikum;
 
 import org.junit.jupiter.api.*;
-import praktikum.util.TestDataProvider;
+import praktikum.testdata.TestDataProvider;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static praktikum.util.ErrorConstant.DEFAULT_ERROR_MESSAGE;
+import static praktikum.constant.ErrorConstant.DEFAULT_ERROR_MESSAGE;
 
 class BunTest {
     private TestDataProvider testData;

@@ -5,11 +5,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import praktikum.util.TestDataProvider;
+import praktikum.testdata.TestDataProvider;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static praktikum.IngredientType.SAUCE;
-import static praktikum.util.ErrorConstant.DEFAULT_ERROR_MESSAGE;
+import static praktikum.constant.ErrorConstant.DEFAULT_ERROR_MESSAGE;
 
 @ExtendWith(MockitoExtension.class)
 class BurgerTest {
