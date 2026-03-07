@@ -11,11 +11,21 @@ public class TestDataProvider {
     private final Random RANDOM = new Random();
     private final Faker FAKER = new Faker();
 
-    public float getRandomFloatPrice(){
+    /**
+     * Метод возвращает случайное значение типа float
+     *
+     * @return float
+     */
+    public float getRandomFloatPrice() {
         return 0.01f + RANDOM.nextFloat() * (100.00f - 0.01f);
     }
 
-    public String getRandomName(){
+    /**
+     * Метод возвращает случайное имя из генератора JavaFaker
+     *
+     * @return String
+     */
+    public String getRandomName() {
         return FAKER.name().name();
     }
 }
