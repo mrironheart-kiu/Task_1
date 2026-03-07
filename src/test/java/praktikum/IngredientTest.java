@@ -1,6 +1,8 @@
 package praktikum;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import praktikum.testdata.TestDataProvider;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -33,9 +35,10 @@ class IngredientTest {
         assertEquals(ingredientName, ingredient.getName(), DEFAULT_ERROR_MESSAGE);
     }
 
-    @Test
+    @ParameterizedTest
+    @MethodSource("praktikum.testdata.ParameterizedTestData#ingredientTestData")
     @DisplayName("Метод Ingredient.getType() возвращает тип ингридиента для бургера")
-    void getTypeReturnsIngredientTypeNameTest() {
-        assertEquals(SAUCE, ingredient.getType(), DEFAULT_ERROR_MESSAGE);
+    void getTypeReturnsIngredientTypeNameTest(IngredientType ingredientType, Ingredient ingredient) {
+        assertEquals(ingredientType, ingredient.getType(), DEFAULT_ERROR_MESSAGE);
     }
 }
