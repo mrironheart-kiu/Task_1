@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import praktikum.util.TestDataProvider;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static praktikum.util.ErrorConstant.DEFAULT_ERROR_MESSAGE;
 
 class BunTest {
     private TestDataProvider testData;
@@ -22,12 +23,12 @@ class BunTest {
     @Test
     @DisplayName("Метод Bun.getName() возвращает наименование булочки для бургера")
     void getNameReturnsBunNameTest() {
-        assertEquals(bunName, bun.getName());
+        assertEquals(bunName, bun.getName(), DEFAULT_ERROR_MESSAGE);
     }
 
     @Test
     @DisplayName("Метод Bun.getPrice() возвращает стоимость булочки для бургера")
     void getPriceReturnsBunPriceTest() {
-        assertEquals(bunPrice, bun.getPrice());
+        assertEquals(bunPrice, bun.getPrice(), DEFAULT_ERROR_MESSAGE);
     }
 }
