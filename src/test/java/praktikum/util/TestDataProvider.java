@@ -4,12 +4,15 @@ import com.github.javafaker.Faker;
 
 import java.util.Random;
 
+/**
+ * Класс для формирования тестовых данных в тестах
+ */
 public class TestDataProvider {
     private final Random RANDOM = new Random();
     private final Faker FAKER = new Faker();
 
     public float getRandomFloatPrice(){
-        return Float.MIN_VALUE + RANDOM.nextFloat() * (Float.MAX_VALUE - Float.MIN_VALUE);
+        return 0.01f + RANDOM.nextFloat() * (100.00f - 0.01f);
     }
 
     public String getRandomName(){
