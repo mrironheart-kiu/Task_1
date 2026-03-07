@@ -1,24 +1,21 @@
 package praktikum;
 
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.*;
-
-import java.util.Random;
+import praktikum.util.TestDataProvider;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BunTest {
+    private TestDataProvider testData;
     private String bunName;
     private float bunPrice;
     private Bun bun;
 
     @BeforeEach
     void setUp() {
-        Faker faker = new Faker();
-        Random random = new Random();
-
-        bunName = faker.name().name();
-        bunPrice = Float.MIN_VALUE + random.nextFloat() * (Float.MAX_VALUE - Float.MIN_VALUE);
+        testData = new TestDataProvider();
+        bunName = testData.getRandomName();
+        bunPrice = testData.getRandomFloatPrice();
         bun = new Bun(bunName, bunPrice);
     }
 
