@@ -52,6 +52,17 @@ class BurgerTest {
     }
 
     @Test
+    @DisplayName("Метод Burger.moveIngredient() изменяет позицию элемент в массиве ингридиентов")
+    void moveIngredientMovesIngredientToAnotherIndexInIngredientArrayTest() {
+        burger.addIngredient(ingredient);
+        burger.addIngredient(new Ingredient(SAUCE,"Salsa",2.0f));
+
+        burger.moveIngredient(0,1);
+
+        assertEquals(burger.ingredients.get(1), ingredient, DEFAULT_ERROR_MESSAGE);
+    }
+
+    @Test
     @DisplayName("Метод Burger.getPrice() возвращает сумму двух булочек и сумму всех ингридиентов")
     void getPriceReturnsSumOfTwoBunsAndAllIngredientsTest() {
         float bunPrice = testData.getRandomFloatPrice();
