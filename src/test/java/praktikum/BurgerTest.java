@@ -19,6 +19,8 @@ class BurgerTest {
     private Bun bun;
     @Mock
     private Ingredient ingredient;
+    @Mock
+    private Ingredient ingredient2;
 
     @BeforeEach
     void setUp() {
@@ -55,7 +57,7 @@ class BurgerTest {
     @DisplayName("Метод Burger.moveIngredient() изменяет позицию элемент в массиве ингридиентов")
     void moveIngredientMovesIngredientToAnotherIndexInIngredientArrayTest() {
         burger.addIngredient(ingredient);
-        burger.addIngredient(new Ingredient(SAUCE,"Salsa",2.0f));
+        burger.addIngredient(ingredient2);
 
         burger.moveIngredient(0,1);
 
